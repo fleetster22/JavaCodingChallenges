@@ -7,8 +7,13 @@ public class Starter {
     // then return the sum doubled.
     // Example: 1+2 = 3; 2+2= 4*2 = 8;
 
-    public static int SumDoubler(int a, int b) {
+    public static int sumDoubler(int a, int b) {
         int sum = 0;
+        if (a == b) {
+            sum = (a + b) * 2;
+        } else {
+            sum = a + b;
+        }
         return sum;
     }
 
@@ -19,6 +24,13 @@ public class Starter {
     // Return true if we sleep in.
 
     public static boolean SleepingIn(boolean weekday, boolean vacation) {
+
+        if (!weekday || vacation) {
+            System.out.println("Sleep in today!");
+            return true;
+        } else {
+            System.out.println("Seize the day!");
+        }
         return false;
     }
 
@@ -27,7 +39,11 @@ public class Starter {
     // If they are not both true or false - return false.
 
     public static boolean AllOrNothing(boolean one, boolean two) {
-        return false;
+        if (one && two || !one && !two) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
 }
