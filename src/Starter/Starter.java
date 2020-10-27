@@ -50,7 +50,13 @@ public class Starter {
     // Return the largest number from a, b, & c;
 
     public static int LargestNumber(int a, int b, int c) {
-        return 0;
+
+        if (a >= b && a >= c)
+            return a;
+        else if (b >= a && b >= c)
+            return b;
+        else
+            return c;
     }
 
     // #5 - ClosestToTen
@@ -59,7 +65,13 @@ public class Starter {
     // HINT: Math.abs()
 
     public static int ClosestToTen(int a, int b) {
-        return 0;
+        int target = 10;
+        if (Math.abs(target - a) < Math.abs(target - b))
+            return a;
+        else if (Math.abs(target - b) < Math.abs(target - a))
+            return b;
+        else
+            return 0;
     }
 
     // #6 - EveryXChar
@@ -69,6 +81,8 @@ public class Starter {
     // (x=3) abcdefg => adg
 
     public static String EveryXChar(String str, int x) {
+        for (int i = 0; i < str.length(); i += 2)
+            System.out.println(str.charAt(i));
         return str;
     }
 }
