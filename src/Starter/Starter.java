@@ -1,5 +1,7 @@
 package Starter;
 
+import java.util.regex.*;
+
 public class Starter {
 
     // #1 - SumDoubler
@@ -44,6 +46,78 @@ public class Starter {
         } else {
             return false;
         }
+    }
+
+    public static String RemoveBalloon(String str) {
+
+        String result = str.toLowerCase();
+
+        // Pattern pattern = Pattern.compile(" (\\B+n\\B+) ");
+        // Matcher matcher = pattern.matcher(result);
+
+        // if (matcher.find()) {
+        // String theGroup = matcher.group(1);
+
+        // System.out.format("'%b\n'", theGroup);
+        // System.out.println(theGroup);
+        // }
+
+        int idx = result.indexOf("balloons");
+
+        if (result.length() >= 8 && result.contains("balloons")) {
+
+            // return result.substring(idx, (idx + 7));
+            return result.substring(0, idx) + result.substring(idx + 8, result.length());
+        }
+        return "false";
+    }
+
+    public static String BalloonSpellCheck(String str) {
+        String result = str.toLowerCase();
+        int idxB = result.indexOf("b");
+
+        if (result.length() >= 8 && result.contains("balloons")) {
+
+            // return result.substring(idx, (idx + 7));
+            return result.substring(0, idxB) + result.substring(idxB + 8, result.length());
+        }
+
+        return String.valueOf(idxB);
+    }
+
+    public static String SpellChecker(String str) {
+
+        String[] correct = str.split("@", 5);
+        return correct[0];
+    }
+
+    // true of 1-3 e's
+    public static Integer Test(String str) {
+        int count = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == 'e')
+                count++;
+
+        }
+        return count;
+    }
+
+    public static int LargestNumber(int a, int b, int c) {
+
+        return 0;
+    }
+
+    public static int ClosestToTen(int a, int b, int c)
+    // hint Math.abs()
+    {
+        return 0;
+
+    }
+
+    public static String EveryXChar(String str, int x) {
+        // return every other character in a sting
+        return str;
+
     }
 
 }
