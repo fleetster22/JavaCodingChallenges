@@ -30,4 +30,29 @@ public class Starter {
         return false;
     }
 
+    // #4 - LargestNumber
+    // Return the largest number from a, b, & c;
+
+    public static int LargestNumber(int a, int b, int c) {
+        return 0;
+    }
+
+    // #5 - ClosestToTen
+    // Given 2 int values, return whichever value is nearest to the value 10, or
+    // return 0 in the event of a tie..
+    // HINT: Math.abs()
+
+    public static int ClosestToTen(int a, int b) {
+        return 0;
+    }
+
+    // #6 - EveryXChar
+    // Given a string. Return only every X char.
+    // (x=1) abcdefg => abcdefg
+    // (x=2) abcdefg => aceg
+    // (x=3) abcdefg => adg
+
+    public static String EveryXChar(String str, int x) {
+        return str;
+    }
 }
