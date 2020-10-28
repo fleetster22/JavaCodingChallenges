@@ -68,10 +68,8 @@ public class Starter {
         int target = 10;
         if (Math.abs(target - a) < Math.abs(target - b))
             return a;
-        else if (Math.abs(target - b) < Math.abs(target - a))
-            return b;
         else
-            return 0;
+            return b;
     }
 
     // #6 - EveryXChar
@@ -81,7 +79,7 @@ public class Starter {
     // (x=3) abcdefg => adg
 
     public static String EveryXChar(String str, int x) {
-        for (int i = 0; i < str.length(); i += 2)
+        for (int i = 0; i < str.length(); i += x)
             System.out.println(str.charAt(i));
         return str;
     }
