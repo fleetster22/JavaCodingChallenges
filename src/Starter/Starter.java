@@ -53,6 +53,39 @@ public class Starter {
     // (x=3) abcdefg => adg
 
     public static String EveryXChar(String str, int x) {
-        return str;
+        return "";
     }
+
+    // #7 RepeatStringXTimes
+    // Given a string, repeat the first n char x times;
+    // str = "Abcdefg" n=3, x=3 => "AbcAbcAbc"
+    // str = "Abcdefg" n=2, x=5 => "AbAbAbAbAb"
+    // str = "Abcdefg" n=4, x=1 => "Abcd"
+
+    public static String RepeatStringXTimes(String str, int n, int x) {
+        return "";
+    }
+
+    // #8 CountInArrX
+    // Given an Array of numbers (ints),
+    // return how many 7's are in array
+    // int[] arr = { 1, 1, 3, 7, 7, 8, 1, 1, 7 }; => 3
+    // int[] arr = { 1, 7 }; => 1
+
+    public static int CountInArrX(int[] arr) {
+        int count = 0;
+        return count;
+    }
+
+    // #9 NextToX
+    // Given an Array of numbers (ints),
+    // return the number of times x is next to each other.
+    // arr = {1,1,3,7,7,8,1,1}; x = 7; => 1
+    // arr = {1,1,3,7,7,8,1,1}; x = 1; => 2
+
+    public static int NextToX(int[] arr, int x) {
+        int count = 0;
+        return count;
+    }
+
 }
