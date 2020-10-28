@@ -79,8 +79,12 @@ public class Starter {
     // (x=3) abcdefg => adg
 
     public static String EveryXChar(String str, int x) {
-        for (int i = 0; i < str.length(); i += x)
-            System.out.println(str.charAt(i));
-        return str;
+        String s = "";
+
+        for (int i = 0; i < str.length(); i += x) {
+            s = s + str.charAt(i);
+
+        }
+        return s;
     }
 }

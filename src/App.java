@@ -10,7 +10,7 @@ public class App {
         // System.out.println(Starter.SleepingIn(false, false));
         System.out.println(Starter.LargestNumber(8, 14, 7) + " is the largest number");
         System.out.println(Starter.ClosestToTen(4, 13) + " is closest to 10");
-        System.out.print(Starter.EveryXChar("Hkeslelcoh vCjhvrxizs", 2));
+        System.out.print(Starter.EveryXChar("Hkeslelcoh vCjhvrxizsh", 2));
 
     }
 }
