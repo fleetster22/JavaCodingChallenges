@@ -87,4 +87,37 @@ public class Starter {
         }
         return s;
     }
+
+    public static String RepeatStringXTimes(String str, int n, int x) {
+        // n= number of characters, x=repeat times
+        if (n > str.length()) {
+            n = str.length();
+        }
+        String howManyChar = str.substring(0, n);
+        String result = howManyChar.repeat(x);
+        return result;
+    }
+
+    // public static int CountInArrX(int[] arr) {
+    // int count = 0;
+    // int result = 0;
+    // for (int i = 0; i < arr.length; i++) {
+    // if (arr[i] == 2) {
+    // count++;
+    // }
+
+    // }
+    // return count;
+    // }
+
+    public static int NextToX(int[] arr, int x) {
+        int count = 0;
+        for (int i = 0; i < arr.length - 1; i++) {
+            if (arr[i] == x && arr[i + 1] == x) {
+                count++;
+            }
+        }
+        return count;
+    }
+
 }
