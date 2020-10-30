@@ -19,7 +19,7 @@ public class App {
         // System.out.println(Starter.NextToX(arr, 6));
         // System.out.println(Starter.RockPaperScissor("paper", "scissors"));
         // System.out.println(Starter.ReverseInt(123));
-        System.out.println(Starter.Factorial(10));
+        System.out.println(Starter.Factorial(8));
 
     }
 }
