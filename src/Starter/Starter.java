@@ -120,4 +120,35 @@ public class Starter {
         return count;
     }
 
+    public static String RockPaperScissor(String Player1, String Player2) {
+
+        if (Player1.equalsIgnoreCase(Player2)) {
+            return "It's a tie";
+        } else if ((Player1 == "rock" && Player2 == "scissors") || (Player1 == "scissors" && Player2 == "paper")) {
+            return "Player1 wins this round!";
+        } else {
+            return "Player2 wins this round!";
+        }
+    }
+
+    public static String ReverseInt(int n) {
+        int result = 0;
+        int rest = Math.abs(n);
+
+        while (rest > 0) {
+            int digit = rest % 10;
+            rest /= 10;
+            result = result * 10 + digit;
+        }
+        return String.valueOf(result);
+    }
+
+    public static long Factorial(long n) {
+        long factorial = 1;
+
+        for (long i = 1; i <= n; ++i) {
+            factorial *= i;
+        }
+        return factorial;
+    }
 }

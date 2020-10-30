@@ -14,9 +14,12 @@ public class App {
         // System.out.println(Starter.EveryXChar("Hkeslelcoh vCjhvrxizsh", 2));
         // System.out.println(Starter.RepeatStringXTimes("ABCABCABC", 10, 3));
 
-        int[] arr = { 2, 2, 4, 6, 6, 8, 6, 2 };
+        // int[] arr = { 2, 2, 4, 6, 6, 8, 6, 2 };
         // System.out.println(Starter.CountInArrX(arr));
-        System.out.println(Starter.NextToX(arr, 6));
+        // System.out.println(Starter.NextToX(arr, 6));
+        // System.out.println(Starter.RockPaperScissor("paper", "scissors"));
+        // System.out.println(Starter.ReverseInt(123));
+        System.out.println(Starter.Factorial(10));
 
     }
 }
