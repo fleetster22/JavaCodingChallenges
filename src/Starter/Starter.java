@@ -1,5 +1,8 @@
 package Starter;
 
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 public class Starter {
 
     // #1 - SumDoubler
@@ -150,5 +153,23 @@ public class Starter {
             factorial *= i;
         }
         return factorial;
+    }
+
+    // camelcase
+    // Hello World remove space and return helloWorld
+    // Stringbuilder / .append
+
+    public static String CamelCase(String str) {
+
+        String s = Stream.of(str.split("[^a-zA-Z0-9]"))
+                .map(v -> v.substring(0, 1).toUpperCase() + v.substring(1).toLowerCase()).collect(Collectors.joining());
+        String camelS = s.toLowerCase().substring(0, 1) + s.substring(1);
+        // StringBuilder s = new StringBuilder();
+        // s.replace(" ", "").append(Character.toLowerCase(str.charAt(0)) +
+        // (str.charAt(1)));
+        return camelS;
+
+        // replaceFirst(str.charAt(0).toLowerCase) + str);
+
     }
 }
