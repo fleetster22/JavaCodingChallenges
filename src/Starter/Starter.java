@@ -1,5 +1,7 @@
 package Starter;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -134,18 +136,6 @@ public class Starter {
         }
     }
 
-    public static String ReverseInt(int n) {
-        int result = 0;
-        int rest = Math.abs(n);
-
-        while (rest > 0) {
-            int digit = rest % 10;
-            rest /= 10;
-            result = result * 10 + digit;
-        }
-        return String.valueOf(result);
-    }
-
     public static long Factorial(long n) {
         long factorial = 1;
 
@@ -164,12 +154,25 @@ public class Starter {
         String s = Stream.of(str.split("[^a-zA-Z0-9]"))
                 .map(v -> v.substring(0, 1).toUpperCase() + v.substring(1).toLowerCase()).collect(Collectors.joining());
         String camelS = s.toLowerCase().substring(0, 1) + s.substring(1);
-        // StringBuilder s = new StringBuilder();
-        // s.replace(" ", "").append(Character.toLowerCase(str.charAt(0)) +
-        // (str.charAt(1)));
+
         return camelS;
 
-        // replaceFirst(str.charAt(0).toLowerCase) + str);
-
     }
+
+    public static int ReverseInt(int x) {
+        int result = 0;
+
+        while (x != 0) {
+            int digit = x % 10;
+            x /= 10;
+
+            if (result > Integer.MAX_VALUE / 10 || result == Integer.MAX_VALUE / 10 && digit > 7)
+                return 0;
+            if (result < Integer.MIN_VALUE / 10 || result == Integer.MIN_VALUE / 10 && digit < -8)
+                return 0;
+            result = result * 10 + digit;
+        }
+        return result;
+    }
+
 }
